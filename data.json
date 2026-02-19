@@ -1,0 +1,68 @@
+{
+    "azienda": {
+        "nome": "Cleansesrls",
+        "telefono": "+39 333 1234567",
+        "email": "info@cleanhost.it"
+    },
+    "sezioni": {
+        "servizi": {
+            "titoloSezione": "Servizi",
+            "elementi": [
+                {
+                    "titolo": "Pulizie Complete",
+                    "descrizione": "Pulizia professionale post check-out.",
+                    "img":""
+                },
+                {
+                    "titolo": "Lavanderia Biancheria",
+                    "descrizione": "Lavaggio e stiratura set completi."
+                },
+                {
+                    "titolo": "Noleggio Biancheria",
+                    "descrizione": "",
+                    "img":"/img/.png"
+                },
+                {
+                    "titolo": "Gestione Check-in",
+                    "descrizione": "",
+                    "img":"/img/checkin.png"
+                }
+            ]
+        },
+        "percheSceglierci": {
+            "titoloSezione": "Perché Sceglierci",
+            "elementi": [
+                {
+                    "id": 1,
+                    "titolo": "Interventi Veloci",
+                    "descrizione": "Tempistiche rapide tra check-out e check-in per evitare ritardi e recensioni negative.",
+                    "icona": "clock.svg"
+                },
+                {
+                    "id": 2,
+                    "titolo": "Disponibili 7 Giorni su 7",
+                    "descrizione": "Sempre operativi, inclusi weekend e festivi.",
+                    "icona": "calendar.svg"
+                },
+                {
+                    "id": 3,
+                    "titolo": "Check-In Coordinati",
+                    "descrizione": "Sincronizzazione perfetta con l'arrivo degli ospiti.",
+                    "icona": "handshake.svg"
+                }
+            ]
+        }
+    },
+    "recensioni": [
+        {
+            "nome": "Luca R.",
+            "testo": "Servizio perfetto, super puntuali!",
+            "voto": 5
+        },
+        {
+            "nome": "Sara M.",
+            "testo": "Ospiti sempre soddisfatti.",
+            "voto": 5
+        }
+    ]
+}
