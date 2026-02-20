@@ -1,0 +1,89 @@
+/* ===== RESET BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== VARIABILI COLORI ===== */
+:root {
+    --primary: #1abc9c;
+    --primary-dark: #16a085;
+    --accent: #f39c12;
+    --text: #333;
+    --light-bg: #f4f9f9;
+}
+
+/* ===== STILE GENERALE ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.footer-links {
+    margin: 1rem;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    /* centro orizzontale (asse principale) */
+    align-items: center;
+    /* centro verticale (asse trasversale) */
+}
+
+.card {
+    height: 15rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  align-self: flex-end;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1, 5rem;
+}
+
+p {
+    font-size: 1rem;
+}
