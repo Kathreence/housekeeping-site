@@ -10,7 +10,7 @@
 
 <body>
     <header>
-         <div class="container">
+        <div class="container">
             <div style="width: 50px;">
                 <a href="index.html" class="nav">
                     <img src="img/logo.svg" alt="CleanHost - Pulizie per Airbnb" class="logo">
@@ -20,7 +20,7 @@
         </div>
         <nav>
             <div id="menu">
-               <img class="material-symbols-outlined" style="width: 40px" src="img/menu.png" alt="">
+                <img class="material-symbols-outlined" style="width: 40px" src="img/menu.png" alt="">
 
                 <ul id="menu-list">
                     <li><a href="index.html">HOME</a></li>
@@ -36,16 +36,17 @@
             <h1>Richiedi un Preventivo</h1>
             <p>Compila il modulo e ti risponderemo il prima possibile.</p>
 
-            <form action="" method="POST">
+            <form action="https://formspree.io/f/xaqddaag" method="POST">
+                <input type="text" name="_gotcha" style="display:none">
 
                 <label for="nome">Nome e Cognome</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" required autocomplete="name">
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required autocomplete="email">
 
                 <label for="telefono">Telefono</label>
-                <input type="tel" id="telefono" name="telefono">
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel">
 
                 <label for="servizio">Tipo di Servizio</label>
                 <select id="servizio" name="servizio" required>
@@ -58,18 +59,17 @@
                 </select>
 
                 <label for="mq">Metri quadri (circa)</label>
-                <input type="number" id="mq" name="mq" min="0">
+                <input type="number" id="mq" name="mq" min="0" inputmode="numeric">
 
                 <label for="messaggio">Dettagli aggiuntivi</label>
                 <textarea id="messaggio" name="messaggio" rows="4"></textarea>
 
                 <label>
-                    <input type="checkbox" required>
-                    Ho letto e accetto l'informativa privacy
+                    <input type="checkbox" name="privacy" required>
+                    Ho letto e accetto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>
                 </label>
 
                 <button type="submit">Richiedi Preventivo</button>
-
             </form>
         </section>
 
