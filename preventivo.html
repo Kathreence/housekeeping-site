@@ -13,14 +13,13 @@
 
 <body>
     <header>
-        <div class="container">
+         <div class="container">
             <div style="width: 50px;">
-                <a href="index.html">
+                <a href="index.html" class="nav">
                     <img src="img/logo.svg" alt="CleanHost - Pulizie per Airbnb" class="logo">
                 </a>
             </div>
-            <h1>Cleansesrls</h1>
-            <h2>Pulizie e Lavanderia per Affitti Brevi</h2>
+            <h1>Pulizie e Lavanderia per Affitti Brevi</h1>
         </div>
         <nav>
             <div id="menu">
@@ -38,7 +37,46 @@
         </nav>
     </header>
     <main>
-       <h3>PREVENTIVO</h3>
+        <section class="preventivo">
+            <h1>Richiedi un Preventivo</h1>
+            <p>Compila il modulo e ti risponderemo il prima possibile.</p>
+
+            <form action="https://formspree.io/f/xaqddaag" method="POST">
+
+                <label for="nome">Nome e Cognome</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <label for="servizio">Tipo di Servizio</label>
+                <select id="servizio" name="servizio" required>
+                    <option value="">Seleziona un servizio</option>
+                    <option>Pulizia appartamento</option>
+                    <option>Pulizia ufficio</option>
+                    <option>Casa vacanze / Airbnb</option>
+                    <option>Noleggio biancheria</option>
+                    <option>Altro</option>
+                </select>
+
+                <label for="mq">Metri quadri (circa)</label>
+                <input type="number" id="mq" name="mq" min="0">
+
+                <label for="messaggio">Dettagli aggiuntivi</label>
+                <textarea id="messaggio" name="messaggio" rows="4"></textarea>
+
+                <label>
+                    <input type="checkbox" required>
+                    Ho letto e accetto l'informativa privacy
+                </label>
+
+                <button type="submit">Richiedi Preventivo</button>
+
+            </form>
+        </section>
 
         <script src="script.js"></script>
     </main>
