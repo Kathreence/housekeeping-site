@@ -11,21 +11,22 @@
                 {
                     "titolo": "Pulizie Complete",
                     "descrizione": "Pulizia professionale post check-out.",
-                    "img":""
+                    "img": "img/house.png"
                 },
                 {
                     "titolo": "Lavanderia Biancheria",
-                    "descrizione": "Lavaggio e stiratura set completi."
+                    "descrizione": "Lavaggio e stiratura set completi.",
+                    "img": "img/laundry-service.png"
                 },
                 {
                     "titolo": "Noleggio Biancheria",
                     "descrizione": "",
-                    "img":"/img/.png"
+                    "img": "img/pillow.png"
                 },
                 {
-                    "titolo": "Gestione Check-in",
+                    "titolo": "Gestione <br>Check-in",
                     "descrizione": "",
-                    "img":"/img/checkin.png"
+                    "img": "img/calendar.png"
                 }
             ]
         },
@@ -36,19 +37,13 @@
                     "id": 1,
                     "titolo": "Interventi Veloci",
                     "descrizione": "Tempistiche rapide tra check-out e check-in per evitare ritardi e recensioni negative.",
-                    "icona": "clock.svg"
+                    "img": "img/speedy.png"
                 },
                 {
                     "id": 2,
-                    "titolo": "Disponibili 7 Giorni su 7",
+                    "titolo": "Disponibili<br>7 Giorni su 7",
                     "descrizione": "Sempre operativi, inclusi weekend e festivi.",
-                    "icona": "calendar.svg"
-                },
-                {
-                    "id": 3,
-                    "titolo": "Check-In Coordinati",
-                    "descrizione": "Sincronizzazione perfetta con l'arrivo degli ospiti.",
-                    "icona": "handshake.svg"
+                    "img": "img/customer-service.png"
                 }
             ]
         }
