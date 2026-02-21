@@ -12,6 +12,11 @@
     --accent: #f39c12;
     --text: #333;
     --light-bg: #f4f9f9;
+
+    /* extra utili (derivati) */
+    --white: #fff;
+    --border: rgba(0, 0, 0, 0.08);
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== STILE GENERALE ===== */
@@ -22,17 +27,28 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
     line-height: 1.6;
-    background-color: #ffffff;
+    background-color: var(--white);
     padding: 2rem;
 }
 
 header {
+    background-color: var(--white);
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9rem;
 }
 
 header .container h1 {
+    height: auto;
     margin-left: 2rem;
+}
+
+.container .logo {
+    width: 100px;
 }
 
 nav {
@@ -51,9 +67,11 @@ nav ul {
     display: none;
 }
 
+/* ===== MENU DROPDOWN ===== */
 #menu {
     position: relative;
     cursor: pointer;
+    color: var(--text);
 }
 
 #menu-list {
@@ -63,17 +81,54 @@ nav ul {
     right: 0;
 
     text-align: end;
-
     list-style: none;
-    padding: 0;
+    padding: 0.5rem 0;
     margin: 0;
-    background: white;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
 }
 
 #menu:hover #menu-list {
     display: block;
 }
 
+#menu-list li {
+    padding: 0.5rem 1rem;
+}
+
+#menu-list li:hover {
+    background: var(--light-bg);
+    color: var(--primary-dark);
+}
+
+/* ===== MOBILE (visibile solo su schermi piccoli) ===== */
+.menu-mobile {
+    display: none;
+}
+
+.menu-desktop {
+    display: flex;
+}
+
+/* Quando lo schermo è piccolo */
+@media (max-width: 768px) {
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+}
+
+main {
+    margin-top: 9rem;
+}
+
+/* ===== FOOTER ===== */
 footer {
     width: 100%;
     display: flex;
@@ -91,9 +146,7 @@ footer {
     padding: 1rem;
     display: flex;
     justify-content: center;
-    /* centro orizzontale (asse principale) */
     align-items: center;
-    /* centro verticale (asse trasversale) */
 }
 
 .container-c {
@@ -104,11 +157,10 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* centro orizzontale (asse principale) */
     align-items: center;
-    /* centro verticale (asse trasversale) */
 }
 
+/* ===== CARD ===== */
 .card {
     text-align: center;
     height: 15rem;
@@ -118,17 +170,24 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 1rem;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .card h3 {
     font-size: 20px;
     margin-bottom: 10px;
     align-self: flex-start;
+    color: var(--primary-dark);
 }
 
 .card p {
     font-size: 14px;
     margin-bottom: 15px;
+    color: var(--text);
 }
 
 .card img {
@@ -137,56 +196,178 @@ footer {
     border-radius: 8px;
 }
 
+/* Hover card (sia con :hover sia con classe .active dal JS) */
+.card:hover,
+.card.active {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: rgba(26, 188, 156, 0.35);
+    /* leggero richiamo al primary */
+}
+
+/* ===== IMMAGINI GENERALI ===== */
 img {
     width: 100%;
     margin: 1rem;
+    border-radius: 14px;
 }
 
+/* ===== TESTI ===== */
 h1 {
     font-size: 2rem;
+    color: var(--primary-dark);
 }
 
 h2 {
-    font-size: 1, 5rem;
+    font-size: 1.5rem;
+    /* FIX: prima era 1, 5rem */
+    color: var(--primary-dark);
 }
 
 p {
     font-size: 1rem;
     text-align: center;
+    color: var(--text);
 }
 
+a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+/* ===== ICONE ===== */
 .material-symbols-outlined {
     font-variation-settings:
         'FILL' 0,
         'wght' 400,
         'GRAD' 0,
-        'opsz' 24
+        'opsz' 24;
+    color: var(--primary-dark);
 }
 
+/* ===== PREVENTIVO / FORM ===== */
 .preventivo {
-  max-width: 500px;
-  margin: auto;
+    max-width: 500px;
+    margin: auto;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-input, select, textarea {
-  margin-bottom: 15px;
-  padding: 10px;
-  font-size: 16px;
+input,
+select,
+textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
+}
+
+/* ===== BOTTONI (ora brand) ===== */
 button {
-  padding: 12px;
-  background-color: #2c7be5;
-  color: white;
-  border: none;
-  cursor: pointer;
+    padding: 12px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #1a5bb8;
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== SEZIONE CHI SIAMO ===== */
+.chi-siamo {
+    padding: 80px 20px;
+    background-color: var(--light-bg);
+    border-radius: 16px;
+}
+
+.chi-siamo .container {
+    max-width: 900px;
+    margin: 0 auto;
+    flex-direction: column;
+    /* rende il testo più ordinato */
+}
+
+.chi-siamo h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--primary-dark);
+}
+
+.chi-siamo p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.chi-siamo .highlight {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--accent);
+}
+
+/* Overlay scuro */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Nasconde */
+.hidden {
+  display: none;
+}
+
+/* Card centrale */
+.modal-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Bottone chiusura */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Animazione */
+@keyframes fadeIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

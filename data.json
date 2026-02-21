@@ -8,17 +8,51 @@
     "servizi": {
       "titoloSezione": "Servizi",
       "elementi": [
-        { "titolo": "Pulizie Complete", "descrizione": "Pulizia professionale post check-out.", "img": "img/house.png" },
-        { "titolo": "Lavanderia Biancheria", "descrizione": "Lavaggio e stiratura set completi.", "img": "img/laundry-service.png" },
-        { "titolo": "Noleggio Biancheria", "descrizione": "Noleggio set completi.", "img": "img/pillow.png" },
-        { "titolo": "Gestione Check-in", "descrizione": "Accoglienza e consegna chiavi.", "img": "img/calendar.png" }
+        {
+          "titolo": "Pulizie Complete",
+          "id":1,
+          "descrizione": "Servizio di pulizia professionale post check-out con sanificazione approfondita di tutti gli ambienti. Include pulizia e disinfezione di bagno e cucina, lavaggio pavimenti, spolveratura superfici, controllo e riordino degli spazi per garantire standard elevati di igiene e accoglienza per gli ospiti successivi.",
+          "img": "img/house.png",
+          "img1": "img/house.png"
+        },
+        {
+          "titolo": "Lavanderia Biancheria",
+          "id":2,
+          "descrizione": "Servizio completo di lavaggio, asciugatura e stiratura di lenzuola, asciugamani e tessili per la casa. Utilizziamo prodotti professionali per garantire freschezza, igiene e massima cura dei tessuti, assicurando set sempre pronti e impeccabili per ogni soggiorno.",
+          "img": "img/laundry-service.png",
+          "img1": "img/laundry-service.png"
+        },
+        {
+          "titolo": "Noleggio Biancheria",
+          "id":3,
+          "descrizione": "Fornitura e noleggio di set completi di biancheria da letto e da bagno di alta qualità. Il servizio include consegna, ritiro e controllo dello stato dei tessuti, offrendo una soluzione pratica e flessibile per strutture ricettive e affitti brevi.",
+          "img": "img/pillow.png",
+          "img1": "img/laundry-service.png"
+        },
+        {
+          "titolo": "Gestione Check-in",
+          "id":4,
+          "descrizione": "Servizio di accoglienza ospiti con gestione completa del check-in: coordinamento degli arrivi, consegna chiavi, verifica documenti e supporto iniziale. Garantiamo puntualità, professionalità e assistenza per offrire un’esperienza positiva fin dal primo momento.",
+          "img": "img/calendar.png",
+          "img1": "img/laundry-service.png"
+        }
       ]
     },
     "percheSceglierci": {
       "titoloSezione": "Perché Sceglierci",
       "elementi": [
-        { "id": 1, "titolo": "Interventi Veloci", "descrizione": "Tempistiche rapide tra check-out e check-in.", "img": "img/speedy.png" },
-        { "id": 2, "titolo": "Disponibili 7 Giorni su 7", "descrizione": "Sempre operativi, inclusi weekend e festivi.", "img": "img/customer-service.png" }
+        {
+          "id": 1,
+          "titolo": "Interventi Veloci",
+          "descrizione": "Tempistiche rapide tra check-out e check-in.",
+          "img": "img/speedy.png"
+        },
+        {
+          "id": 2,
+          "titolo": "Disponibili 7 Giorni su 7",
+          "descrizione": "Sempre operativi, inclusi weekend e festivi.",
+          "img": "img/customer-service.png"
+        }
       ]
     }
   }
