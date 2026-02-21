@@ -35,11 +35,22 @@ header {
     background-color: var(--white);
     display: flex;
     justify-content: center;
+    align-content: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 9rem;
+}
+
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 header .container h1 {
@@ -52,7 +63,7 @@ header .container h1 {
 }
 
 nav {
-    margin: auto;
+    margin: auto 3rem auto 0;
 }
 
 .nav img {
@@ -235,6 +246,7 @@ a {
     font-weight: bold;
     color: var(--primary-dark);
 }
+
 /* ===== ICONE ===== */
 .material-symbols-outlined {
     font-variation-settings:
@@ -331,43 +343,72 @@ button:active {
 
 /* Overlay scuro */
 .overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
 }
 
 /* Nasconde */
 .hidden {
-  display: none;
+    display: none;
 }
 
 /* Card centrale */
 .modal-card {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  animation: fadeIn 0.3s ease;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
 }
 
 /* Bottone chiusura */
 .close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 24px;
-  cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /* Animazione */
 @keyframes fadeIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.cta-preventivo {
+    display: block;
+    height: 5rem;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    margin: auto;
+    margin-left: 3rem;
+    padding: 2rem;
+    border-radius: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-preventivo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
